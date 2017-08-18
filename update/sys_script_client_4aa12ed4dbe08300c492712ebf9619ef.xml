@@ -33,8 +33,13 @@
 	function populateEmailField(response){
 		// Extract the email address from the response, clear any value from the email field,
 		// set new value in the email field
-		alert(response.responseXML);
+		//alert(response.responseXML);
 		var emailFromScriptInclude = response.responseXML.documentElement.getAttribute("answer");
+		// 		var result = emailFromScriptInclude.evalJSON();
+		// 		alert(result[2]);
+		// 		var _number = result.first_name;
+		// 		var _description = result.last_name;
+		// 		alert("Number is : "+ _number +"& Description is : "+ _description);
 		alert(emailFromScriptInclude);
 		g_form.clearValue('u_requested_for_email');
 		g_form.setValue('u_requested_for_email',emailFromScriptInclude);
@@ -55,7 +60,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>4aa12ed4dbe08300c492712ebf9619ef</sys_id>
-        <sys_mod_count>9</sys_mod_count>
+        <sys_mod_count>17</sys_mod_count>
         <sys_name> NeedIt Populate Email Field</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -63,7 +68,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_client_4aa12ed4dbe08300c492712ebf9619ef</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-10 05:13:14</sys_updated_on>
+        <sys_updated_on>2017-08-14 19:14:52</sys_updated_on>
         <table>x_58872_needit_needit</table>
         <type>onChange</type>
         <ui_type>0</ui_type>
