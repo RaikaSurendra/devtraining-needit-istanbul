@@ -1,26 +1,28 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <record_update table="sys_security_acl">
     <sys_security_acl action="INSERT_OR_UPDATE">
-        <active>true</active>
+        <active>false</active>
         <admin_overrides>true</admin_overrides>
         <advanced>false</advanced>
-        <condition/>
-        <description>Default access control on x_58872_needit_needit</description>
+        <condition table="x_58872_needit_needit">u_requested_forDYNAMIC5c3c9da0dbbc0300c492712ebf96191a^EQ<item endquery="false" field="u_requested_for" goto="false" newquery="false" operator="DYNAMIC" or="false" value="5c3c9da0dbbc0300c492712ebf96191a"/>
+            <item endquery="true" field="" goto="false" newquery="false" operator="=" or="false" value=""/>
+        </condition>
+        <description/>
         <name>x_58872_needit_needit</name>
         <operation display_value="read">read</operation>
         <script/>
         <sys_class_name>sys_security_acl</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-08-07 05:05:27</sys_created_on>
-        <sys_id>ab6d44b3db904300c492712ebf9619bb</sys_id>
-        <sys_mod_count>2</sys_mod_count>
+        <sys_created_on>2017-08-22 05:09:24</sys_created_on>
+        <sys_id>400e1d64dbbc0300c492712ebf961960</sys_id>
+        <sys_mod_count>1</sys_mod_count>
         <sys_name>x_58872_needit_needit</sys_name>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_security_acl_ab6d44b3db904300c492712ebf9619bb</sys_update_name>
+        <sys_update_name>sys_security_acl_400e1d64dbbc0300c492712ebf961960</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-22 05:08:24</sys_updated_on>
+        <sys_updated_on>2017-08-22 05:24:12</sys_updated_on>
         <type display_value="record">record</type>
     </sys_security_acl>
 </record_update>

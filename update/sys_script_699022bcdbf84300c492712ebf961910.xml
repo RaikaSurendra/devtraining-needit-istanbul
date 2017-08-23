@@ -19,7 +19,7 @@
         <filter_condition/>
         <is_rest>false</is_rest>
         <message/>
-        <name>Email Address Syntax Validate</name>
+        <name>GetEmployees</name>
         <order>100</order>
         <priority>100</priority>
         <rest_method/>
@@ -29,41 +29,36 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-	
+
 	// Add your code here
-	// Pass the Requested for email to the Script Include.  Store the return
-	// value from the Script Include in the isEmail variable
-	var isEmail = validateEmailAddress(current.u_requested_for_email);
-	//var mem = x_58872_needit.Employee().getManagedEmployees(gs.getUserID(),[]);
-	//gs.info(mem);
-	// If isEmail is false (email address syntax is not valid) do not save
-	// the record.  Write an error message to the screen.
-	if(isEmail == false){
-		gs.addErrorMessage(current.u_requested_for_email + " is not a valid email address.  You must provide a valid email address.");
-		
-		current.setAbortAction(true);
+	var usr = gs.getUserID();
+	var emp = new Employee();
+	var arr = emp.getManagedEmployees(usr,[]);
+	gs.addInfoMessage(arr.length);
+	var i= 0.0;
+	var t = arr.length;
+	for(i= 0.0 ; i < t ; i++) { //Loop into the array
+		g_form.addInfoMessage(arr[i]+" - ");
 	}
-	
-	
-	
+
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
-        <sys_created_on>2017-08-08 06:10:00</sys_created_on>
+        <sys_created_on>2017-08-23 04:53:38</sys_created_on>
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
-        <sys_id>3ba5edc0dbe84300c492712ebf961945</sys_id>
-        <sys_mod_count>7</sys_mod_count>
-        <sys_name>Email Address Syntax Validate</sys_name>
+        <sys_id>699022bcdbf84300c492712ebf961910</sys_id>
+        <sys_mod_count>6</sys_mod_count>
+        <sys_name>GetEmployees</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
         <sys_policy/>
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
-        <sys_update_name>sys_script_3ba5edc0dbe84300c492712ebf961945</sys_update_name>
+        <sys_update_name>sys_script_699022bcdbf84300c492712ebf961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-22 14:48:32</sys_updated_on>
+        <sys_updated_on>2017-08-23 05:22:52</sys_updated_on>
         <template/>
-        <when>before</when>
+        <when>after</when>
     </sys_script>
-    <sys_translated_text action="delete_multiple" query="documentkey=3ba5edc0dbe84300c492712ebf961945"/>
+    <sys_translated_text action="delete_multiple" query="documentkey=699022bcdbf84300c492712ebf961910"/>
 </record_update>
