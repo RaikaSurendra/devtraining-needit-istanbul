@@ -29,18 +29,17 @@
         <rest_variables/>
         <role_conditions/>
         <script><![CDATA[(function executeRule(current, previous /*null when async*/) {
-
 	// Add your code here
 	var usr = gs.getUserID();
 	var emp = new Employee();
 	var arr = emp.getManagedEmployees(usr,[]);
-	gs.addInfoMessage(arr.length);
+	//gs.addInfoMessage(arr.length);
 	var i= 0.0;
-	var t = arr.length;
-	for(i= 0.0 ; i < t ; i++) { //Loop into the array
-		g_form.addInfoMessage(arr[i]+" - ");
+    gs.addInfoMessage(arr.toString());
+	for(i ; i < arr.length ; i++) { //Loop into the array
+		gs.addInfoMessage(arr[i]+ " - ");
 	}
-
+	
 })(current, previous);]]></script>
         <sys_class_name>sys_script</sys_class_name>
         <sys_created_by>admin</sys_created_by>
@@ -48,7 +47,7 @@
         <sys_domain>global</sys_domain>
         <sys_domain_path>/</sys_domain_path>
         <sys_id>699022bcdbf84300c492712ebf961910</sys_id>
-        <sys_mod_count>6</sys_mod_count>
+        <sys_mod_count>21</sys_mod_count>
         <sys_name>GetEmployees</sys_name>
         <sys_overrides/>
         <sys_package display_value="NeedIt" source="x_58872_needit">6ead8e780f603200cd674f8ce1050ed1</sys_package>
@@ -56,7 +55,7 @@
         <sys_scope display_value="NeedIt">6ead8e780f603200cd674f8ce1050ed1</sys_scope>
         <sys_update_name>sys_script_699022bcdbf84300c492712ebf961910</sys_update_name>
         <sys_updated_by>admin</sys_updated_by>
-        <sys_updated_on>2017-08-23 05:22:52</sys_updated_on>
+        <sys_updated_on>2017-08-23 08:08:40</sys_updated_on>
         <template/>
         <when>after</when>
     </sys_script>
